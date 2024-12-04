@@ -1,4 +1,3 @@
-
 let buttons = document.querySelectorAll("button");
 let input = document.querySelector("input");
 let ans = "";
@@ -9,17 +8,11 @@ buttons.forEach((button) => {
 
     if (character === "AC") {
       ans = "";
-    } 
-    
-    else if (character === "=") {
-      
-        ans = eval(ans); 
-      
-    }
-    else if (character === "Del") {
+    } else if (character === "=") {
+      ans = eval(ans);
+    } else if (character === "Del") {
       ans = ans.slice(0, -1);
-    } 
-    else {
+    } else {
       ans += character;
     }
 
