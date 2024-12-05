@@ -6,6 +6,8 @@ buttons.forEach((button) => {
   button.addEventListener("click", () => {
     let character = button.innerText;
 
+    const specialChars = ["+", "-", "*", "/","%","."];
+
     if (character === "AC") {
       ans = "";
     } else if (character === "=") {
@@ -13,8 +15,13 @@ buttons.forEach((button) => {
     } else if (character === "Del") {
       ans = ans.slice(0, -1);
     } else {
-      ans += character;
+
+      let lastChar = ans[ans.length - 1];
+      if (!(specialChars.includes(lastChar) && specialChars.includes(character))) {
+        ans += character;
+      }
     }
+
 
     if (ans === "") {
       input.value = "0";
