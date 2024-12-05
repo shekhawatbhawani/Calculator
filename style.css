@@ -1,49 +1,81 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(50deg, rgb(38 45 53), #171b1e);
-    color: white;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(50deg, rgb(38 45 53), #171b1e);
+  color: white;
 }
-.container{
-    border: 2px solid white;
-    padding: 20px;
-    width: 30%;
-    border-radius: 30px;
+.container {
+  border: 2px solid white;
+  padding: 20px;
+  min-width: 300px;
+  width: fit-content;
+  border-radius: 30px;
 }
-input{
-    text-align: end;
-    font-size: 2.5rem;
-    margin: 20px auto;
-    width: 100%;
-    background: linear-gradient(50deg, rgb(38 45 53), #21262b);
-    border: none;
-    outline: none;
-    border-radius: 30px;
+input {
+  text-align: end;
+  font-size: 2.5rem;
+  margin: 20px auto;
+  background: linear-gradient(50deg, rgb(38 45 53), #21262b);
+  width: 95%;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  padding: 5px 20px;
+  color: white;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+button {
+  margin: 10px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 2rem;
+  background-color: #292d31;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bolder;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+  box-shadow: -2px 2px 18px rgb(52, 49, 49);
+}
 
+button:hover {
+  box-shadow: -2px 2px 18px rgb(126, 119, 119);
+  transition-duration: 0.5s;
 }
-button{
-    margin: 10px 15px;
-    border-radius: 50%;
+.blue {
+  color: rgb(6, 157, 207);
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 1.5rem;
+    padding: 10px;
+    width: 100%;
+  }
+  button {
     width: 50px;
     height: 50px;
-    font-size: 1.1rem;
-    padding: 10px;
-    background-color:  #292d31;
-    border: none;
-    outline: none;
-    color: white;
-    font-weight: bolder;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
-    box-shadow: -8px -6px 11px rgb(67, 66, 66);
-}
-.blue{
-    color: rgb(6, 157, 207);
+    font-size: 1.3rem;
+  }
+  .btns {
+    width: 100%;
+  }
 }
